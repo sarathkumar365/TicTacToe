@@ -76,7 +76,17 @@ while(True):
     cp =current_player()
     print("Current Player",cp)
     print("CHOOSE A PLACE FROM 1-9")
-    usr_input = int(input(">>  "))
+    data_inputs =[1,2,3,4,5,6,7,8,9]
+    while(True):
+        usr_input = input(">>  ")
+        if usr_input:
+            if int(usr_input) in data_inputs:
+                break
+            else:
+                print("Wrong Input")
+        else:
+            print("Empty Input")
+    usr_input = int(usr_input)
     board[usr_input-1] = cp
     display_b()
     if col_win() == 1:

@@ -1,2 +1,5 @@
-s =  "X"
-print("hai ",s)
+x =  input("enter ")
+if x:
+    print("done")
+else:
+    print("no")
